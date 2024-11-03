@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container, .row, .col, .taskList {
+    padding-left: 0 !important;
+}
+
+body {
+    background: #f5f5f3;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header{
+    display:flex;
+    justify-content:center;
+}
+
+.title {
+    display: flex;
+    width: 600px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+
+.title > h1 {
+    font-size: 48px;
+    color: #366305;
+    padding: 30px 0px 15px 0px;
+}
+
+.taskList {
+    width:100%;
+    max-width:600px;
+    overflow-x:auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.taskCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.btnsOrder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btnsAction {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+ 
+.taskContent {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.taskHeader {
+    display: flex;
+    align-items: center;
+}
+
+.taskHeader > h1 {
+    font-size: 28px;
+    color: #1A2E05;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.taskInfo {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin: 25px 0px 0px 15px;
+}
+
+.taskInfo > h2 {
+    color: #366305;
+    font-size: 20px;
+    padding-bottom: 8px;
+
+}
+
+.taskInfo > h3 {
+    font-size: 20px;
+    color: #4f5549;
+    position: absolute;
+    right: 28px;
+}
+
+.taskCard a, button {
+    font-size: 24px;
+    color: #1A2E05;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btnsOrder a, button {
+    font-size: 32px;
+    margin: 2px;
+}
+
+.btnsAction a, button {
+    font-size: 24px;
+    margin: 7px;
+}
+
+.createBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #1A2E05;
+    border: none;
+    outline: none;
+    font-size: 72px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.createBtn:hover {
+    color: #2d4902;
+}
+
+.overBudget {
+    background-color: #fff7f7;
+    border: 1px solid #d13e3e;
+}
+
+#modalDialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color: #f5f5f3;
+    border: 1px solid rgb(102, 102, 102);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bbb;
+    padding: 10px 20px;
+}
+
+.modalHeader h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    color: #1A2E05;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.closeModal {
+    font-size: 32px;
+    color: #1A2E05;
+}
+
+#editForm {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+#editForm Input {
+    width: 60%; 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.modalBody, .modalEdit {
+    width: 100%;
+    padding: 15px;
+}
+
+.modalBody Button {
+    background-color:#2d4902;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.modalBody button:hover {
+    background-color:#366305;
+}
+
+.modalBody label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.number {
+    font-family: 'Roboto', sans-serif;
+}
+
+.alertError {
+    font-size: 16px;
+    color: #d13e3e;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb; 
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
